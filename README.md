@@ -31,6 +31,12 @@ Run tests with pytest:
 python3 -m pytest tests/ -q
 ```
 
+## Performance Results
+
+**Measured status:** GPT-2 on CPU, standard-attention baseline only. The streaming method itself has not been measured yet; a Qwen run is still to do.
+
+See [RESULTS.md](./RESULTS.md) for measured benchmarks on a GPT-2 model.
+
 ## License
 
 MIT
