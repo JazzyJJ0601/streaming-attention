@@ -1,0 +1,109 @@
+{
+  "model": "Qwen3-8B",
+  "data": "wikitext-2 test, 16 x 4096 tokens",
+  "scored": "tokens 1024..4095",
+  "sinks": 4,
+  "rows": [
+    {
+      "method": "full",
+      "budget": null,
+      "ppl": 8.7155,
+      "tokens": 49152,
+      "seconds": 16.8
+    },
+    {
+      "method": "window",
+      "budget": 256,
+      "ppl": 26.5756,
+      "tokens": 49152,
+      "seconds": 24.0
+    },
+    {
+      "method": "sinks",
+      "budget": 256,
+      "ppl": 11.3559,
+      "tokens": 49152,
+      "seconds": 24.0
+    },
+    {
+      "method": "dyadic",
+      "budget": 256,
+      "ppl": 12.4206,
+      "tokens": 49152,
+      "seconds": 30.5,
+      "block": 16,
+      "bias": true,
+      "window": 229,
+      "max_summary_slots": 8
+    },
+    {
+      "method": "dyadic",
+      "budget": 256,
+      "ppl": 12.7469,
+      "tokens": 49152,
+      "seconds": 25.3,
+      "block": 64,
+      "bias": true,
+      "window": 183,
+      "max_summary_slots": 6
+    },
+    {
+      "method": "dyadic-nobias",
+      "budget": 256,
+      "ppl": 11.5239,
+      "tokens": 49152,
+      "seconds": 30.4,
+      "block": 16,
+      "bias": false,
+      "window": 229,
+      "max_summary_slots": 8
+    },
+    {
+      "method": "window",
+      "budget": 512,
+      "ppl": 19.4038,
+      "tokens": 49152,
+      "seconds": 24.0
+    },
+    {
+      "method": "sinks",
+      "budget": 512,
+      "ppl": 10.0735,
+      "tokens": 49152,
+      "seconds": 24.0
+    },
+    {
+      "method": "dyadic",
+      "budget": 512,
+      "ppl": 10.5536,
+      "tokens": 49152,
+      "seconds": 30.4,
+      "block": 16,
+      "bias": true,
+      "window": 485,
+      "max_summary_slots": 8
+    },
+    {
+      "method": "dyadic",
+      "budget": 512,
+      "ppl": 10.6397,
+      "tokens": 49152,
+      "seconds": 25.3,
+      "block": 64,
+      "bias": true,
+      "window": 439,
+      "max_summary_slots": 6
+    },
+    {
+      "method": "dyadic-nobias",
+      "budget": 512,
+      "ppl": 10.1194,
+      "tokens": 49152,
+      "seconds": 30.5,
+      "block": 16,
+      "bias": false,
+      "window": 485,
+      "max_summary_slots": 8
+    }
+  ]
+}
